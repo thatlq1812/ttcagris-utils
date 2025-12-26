@@ -165,8 +165,8 @@ class ModelRegistry:
     def get_default_model(cls, provider: str) -> str:
         """Get default model ID for a provider."""
         defaults = {
-            "gemini": "gemini-1.5-flash",
+            "gemini": "gemini-2.0-flash",
             "openai": "gpt-4o-mini",
             "claude": "claude-3-5-sonnet-20241022",
         }
-        return defaults.get(provider, "gemini-1.5-flash")
+        return defaults.get(provider, "gemini-2.0-flash")

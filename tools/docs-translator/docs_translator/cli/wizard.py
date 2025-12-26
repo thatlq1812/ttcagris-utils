@@ -194,9 +194,10 @@ class SetupWizard:
 
                 client = anthropic.Anthropic(api_key=api_key)
                 # Claude doesn't have a list models endpoint
-                # Try a minimal request
+                # Try a minimal request with default model from env
+                from docs_translator.config.manager import DEFAULT_MODELS
                 client.messages.create(
-                    model="claude-3-haiku-20240307",
+                    model=DEFAULT_MODELS["claude"],
                     max_tokens=1,
                     messages=[{"role": "user", "content": "Hi"}],
                 )

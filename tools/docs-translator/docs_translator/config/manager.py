@@ -16,6 +16,14 @@ except ImportError:
     KEYRING_AVAILABLE = False
 
 
+# Default model configuration - can be overridden by environment variables
+DEFAULT_MODELS = {
+    "gemini": os.getenv("DOCS_TRANSLATOR_GEMINI_MODEL", "gemini-2.0-flash"),
+    "openai": os.getenv("DOCS_TRANSLATOR_OPENAI_MODEL", "gpt-4o-mini"),
+    "claude": os.getenv("DOCS_TRANSLATOR_CLAUDE_MODEL", "claude-3-5-sonnet-20241022"),
+}
+
+
 @dataclass
 class ProviderConfig:
     """Configuration for a single API provider."""
@@ -187,17 +195,17 @@ class TranslatorConfig:
                 "gemini": ProviderConfig(
                     api_key_source="env",
                     api_key_env="GOOGLE_API_KEY",
-                    model="gemini-1.5-flash",
+                    model=DEFAULT_MODELS["gemini"],
                 ),
                 "openai": ProviderConfig(
                     api_key_source="env",
                     api_key_env="OPENAI_API_KEY",
-                    model="gpt-4o-mini",
+                    model=DEFAULT_MODELS["openai"],
                 ),
                 "claude": ProviderConfig(
                     api_key_source="env",
                     api_key_env="ANTHROPIC_API_KEY",
-                    model="claude-3-5-sonnet-20241022",
+                    model=DEFAULT_MODELS["claude"],
                 ),
             }
         if not self.preserve_terms:

@@ -154,6 +154,17 @@ OPENAI_API_KEY=your-openai-api-key
 ANTHROPIC_API_KEY=your-anthropic-api-key
 ```
 
+### Default Models (Optional)
+
+You can override default models via environment variables:
+
+```bash
+# .env (optional - defaults shown)
+DOCS_TRANSLATOR_GEMINI_MODEL=gemini-2.0-flash
+DOCS_TRANSLATOR_OPENAI_MODEL=gpt-4o-mini
+DOCS_TRANSLATOR_CLAUDE_MODEL=claude-3-5-sonnet-20241022
+```
+
 ### Translation Styles
 
 | Style | Description | Use Case |
