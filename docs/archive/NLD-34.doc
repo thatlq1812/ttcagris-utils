@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#NLD-34] [App][HO Portal] Implement luồng cập nhật trạng thái hoạt động/không hoạt động Supplier</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://gmbc.atlassian.net/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <b><a id="parent_issue_summary" href="https://gmbc.atlassian.net/browse/NLD-8">AGRI OPERATION</a></b>
+                <span style="font-size: 9px">(<a id="parent_issue_key" href="https://gmbc.atlassian.net/browse/NLD-8">NLD-8</a>)</span>
+                <h3 class="formtitle"><img src="https://gmbc.atlassian.net/images/icons/link_out_bot.gif" width="16" height="16" />
+                        [NLD-34]&nbsp;<a href="https://gmbc.atlassian.net/browse/NLD-34">[App][HO Portal] Implement luồng cập nhật trạng thái hoạt động/không hoạt động Supplier</a>
+            <span class="subText">
+               Created: 11/Dec/25                   &nbsp;Updated: 15/Dec/25
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Status:</b></td>
+        <td width="80%">To Do</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Project:</b></td>
+        <td width="80%"><a href="https://gmbc.atlassian.net/secure/BrowseProject.jspa?id=10075">AgriOS Platform</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Components:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Affects versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Fix versions:</b></td>
+            <td>
+                            None
+                </td>
+    </tr>
+    
+    
+            <td width="20%"><b>Parent:</b></td>
+        <td width="80%"><a href="https://gmbc.atlassian.net/browse/NLD-8">AGRI OPERATION</a></td>
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Type:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Story
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Priority:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Medium
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Reporter:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:4fecc29a-c303-460b-8ccf-d47c2b6dc727"
+                id="word_reporter_712020:4fecc29a-c303-460b-8ccf-d47c2b6dc727"
+                href="https://gmbc.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3A4fecc29a-c303-460b-8ccf-d47c2b6dc727">
+                    Nguyễn Trương Hoàng Tín
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Assignee:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="712020:4fecc29a-c303-460b-8ccf-d47c2b6dc727"
+                id="word_assignee_712020:4fecc29a-c303-460b-8ccf-d47c2b6dc727"
+                href="https://gmbc.atlassian.net/secure/ViewProfile.jspa?accountId=712020%3A4fecc29a-c303-460b-8ccf-d47c2b6dc727">
+                    Nguyễn Trương Hoàng Tín
+                </a>
+
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Resolution:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Unresolved
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Votes:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Labels:</b>
+        </td>
+        <td id="labels-10354-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            None
+                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Remaining Estimate:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Time Spent:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Original estimate:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Not Specified
+            		</td>
+    </tr>
+    
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Attachments:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://gmbc.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG File">
+                    image-20251211-080644.png &nbsp;&nbsp;&nbsp;
+                                    <img src="https://gmbc.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG File">
+                    image-20251211-080738.png &nbsp;&nbsp;&nbsp;
+                                    <img src="https://gmbc.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG File">
+                    image-20251211-075949.png &nbsp;&nbsp;&nbsp;
+                                    <img src="https://gmbc.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="PNG File">
+                    image-20251211-075909.png &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+            <tr>
+            <td bgcolor="#f0f0f0" width="20%" valign="top">
+                <b>Issue links:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" class="noPadding">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" class="blank">
+                                            <tr>
+                            <td colspan="4" bgcolor="#f0f0f0">
+                                <b>Relates</b><br/>
+                            </td>
+                        </tr>
+                                                                <tr>
+            <td>
+                relates to
+            </td>
+            <td>
+                <a href="https://gmbc.atlassian.net/browse/NLD-29">
+                     NLD-29                 </a>
+            </td>
+            <td>
+                [App] Supplier Account
+            </td>
+            <td>
+                To Do
+            </td>
+        </tr>
+                                        </table>
+            </td>
+        </tr>
+    
+
+
+    
+                        <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Sprint:</b></td>
+                <td id="customfield_10020-10354-value" class="value" bgcolor="#ffffff" width="80%">AP Sprint 2</td>
+            </tr>
+                                <tr>
+                <td bgcolor="#f0f0f0" width="20%" valign="top"><b>Rank:</b></td>
+                <td id="customfield_10019-10354-value" class="value" bgcolor="#ffffff" width="80%">      0|i000rb:
+  </td>
+            </tr>
+            </table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Description</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <p><b>Description:</b></p>
+
+<p>Mục quản lý nhà thầu đang có trạng thái hoạt động và không hoạt động theo foundation của Authorization</p>
+
+<p><b>Expectation:</b></p>
+
+<p>Implement luồng update trạng thái hoạt động dùng cho việc khóa hoặc mở nhà thầu cho các điều kiện vận hành đặc biệt nếu có.</p>
+
+<p><b>Requirement:</b></p>
+
+<p>1 - <span class="error">&#91;BE&#93;</span> Thêm API update tắt/mở trạng thái hoạt động của nhà thầu <tt>is_deactivate</tt> <font color="#bf2600">=&gt; mục tiêu để sử dụng cho việc phân quyền tập trung</font></p>
+
+<p>2 - <span class="error">&#91;FE&#93;</span> Portal chỉnh sửa giao diện trạng thái đang hoạt động của nhà thầu sang dạng toggle trong chi tiết nhà thầu và cho phép cập nhật trạng thái này</p>
+
+<p>Đường dẫn: Hub/HO Portal &gt; Danh sách nhà thầu &gt; Chi tiết nhà thầu &gt; Trạng thái hoạt động</p>
+
+<ul>
+	<li>Chuyển từ loại badge trạng thái</li>
+</ul>
+
+
+<p><span class="image-wrap" style=""><img src="/rest/api/3/attachment/content/10122" alt="image-20251211-075909.png" width="184" style="border: 0px solid black" /></span></p>
+
+<ul>
+	<li>Sang dạng toggle</li>
+</ul>
+
+
+<p><span class="image-wrap" style=""><img src="/rest/api/3/attachment/content/10121" alt="image-20251211-075949.png" width="210" style="border: 0px solid black" /></span></p>
+
+<p>Toggle On =&gt; <tt>suppliers.is_deactivate</tt> = false</p>
+
+<p>Toggle On =&gt; <tt>suppliers.is_deactivate</tt> = true</p>
+
+<p><font color="#ff5630">3 <span class="error">&#91;BE&#93;</span> Thực hiện IPN để App có thể biết và force user out khỏi trang nhà thầu nếu user đang trong trang nhà thầu =&gt; Làm sau</font></p>
+
+<p>4 <span class="error">&#91;FE&#93;</span> App thực hiện ngăn chặn user vào trang nhà cung cấp AgriOS khi bị cho dừng hoạt động</p>
+
+<ul>
+	<li>Điều kiện: <tt>suppliers.is_deactivate</tt> = true</li>
+	<li>Action:</li>
+</ul>
+
+
+<p><b>Scenario 1:</b> User truy cập vào trang tài khoản phía farmer để truy cập vào kênh nhà chung cấp</p>
+
+<ul>
+	<li>Trigger: User nhấn vào “Kênh nhà cung cấp”</li>
+	<li>Action: App điều hướng sang trang thông báo tạm khóa =&gt; User nhấn “Đồng ý” để quay về lại trang tài khoản AgriOS</li>
+</ul>
+
+
+<p><span class="image-wrap" style=""><img src="/rest/api/3/attachment/content/10119" alt="image-20251211-080644.png" width="166" style="border: 0px solid black" /></span></p>
+
+<p><span class="image-wrap" style=""><img src="/rest/api/3/attachment/content/10120" alt="image-20251211-080738.png" width="174" style="border: 0px solid black" /></span></p>
+
+<p><b>Scenario 2:</b> User đang trong trang nhà thầu</p>
+
+<ul>
+	<li>Trigger: BE thực hiện thông báo đến app nhà thầu bị deactivate</li>
+	<li>Action: App điều hướng sang trang thông báo tạm khóa =&gt; User nhấn “Đồng ý” để quay về lại trang chủ AgriOS</li>
+</ul>
+
+
+<p><span class="image-wrap" style=""><img src="/rest/api/3/attachment/content/10120" alt="image-20251211-080738.png" width="174" style="border: 0px solid black" /></span></p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+Generated at Mon Dec 15 10:03:11 UTC 2025 by Nguyễn Đăng Phúc Lợi using Jira 1001.0.0-SNAPSHOT#100290-rev:ed23e567eb9775b3585be7f8699da0b049003a2c.
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+# =============================================================================
+# Dockerfile for Web API Gateway (Development)
+# =============================================================================
+# This Dockerfile is used for local development with Docker Compose.
+# It expects a pre-built Linux binary at web-api-gateway/bin/webgw-linux
+#
+# Build binary (Windows PowerShell):
+#   $env:CGO_ENABLED="0"; $env:GOOS="linux"; $env:GOARCH="amd64"
+#   cd web-api-gateway && go build -o bin/webgw-linux ./cmd/app/ && cd ..
+#
+# Build binary (Linux/macOS):
+#   CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o web-api-gateway/bin/webgw-linux ./web-api-gateway/cmd/app/
+# =============================================================================
+
+FROM alpine:3.19
+
+RUN apk add --no-cache ca-certificates tzdata wget
+
+WORKDIR /app
+
+# Copy pre-built binary
+COPY web-api-gateway/bin/webgw-linux /app/web-api-gateway
+
+# Copy config
+COPY web-api-gateway/config /app/config
+
+# Make binary executable
+RUN chmod +x /app/web-api-gateway
+
+# Create non-root user
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+RUN chown -R appuser:appgroup /app
+
+USER appuser
+
+# Expose port (HTTP: 4001)
+EXPOSE 4001
+
+ENTRYPOINT ["/app/web-api-gateway", "api"]
