@@ -1,0 +1,39 @@
+# Docs Translator Configuration Example
+# Copy this file to docs-translator.yaml and customize
+
+# AI Provider settings
+providers:
+  # Active provider: gemini, openai, or claude
+  active: "gemini"
+  
+  gemini:
+    model: "gemini-2.0-flash"
+    # Other options: gemini-2.5-flash-preview-05-20, gemini-2.5-pro-preview-05-06
+  
+  openai:
+    model: "gpt-4o-mini"
+    # Other options: gpt-4o, gpt-4-turbo, gpt-3.5-turbo
+  
+  claude:
+    model: "claude-3-haiku-20240307"
+    # Other options: claude-3-5-sonnet-20241022, claude-3-opus-20240229
+
+# Translation settings
+translation:
+  # Style: "literal" (technical accuracy) or "natural" (reader-friendly)
+  style: "literal"
+  
+  # Temperature: 0.0-1.0 (lower = more consistent, higher = more creative)
+  temperature: 0.3
+
+# Default languages
+languages:
+  default_source: "auto"  # auto-detect source language
+  default_target: "en"    # default target language
+
+# Terms to preserve (never translate these)
+preserve_terms:
+  - "API Gateway"
+  - "User Service"
+  - "AgriOS"
+  # Add your project-specific terms here
