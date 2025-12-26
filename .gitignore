@@ -139,3 +139,11 @@ yarn-error.log*
 # docs-translator
 .translation_cache/
 docs-translator.yaml
+
+
+# ----------------
+# Specific files and folders
+# ----------------
+
+docs/
+docker/
