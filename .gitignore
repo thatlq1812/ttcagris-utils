@@ -145,5 +145,6 @@ docs-translator.yaml
 # Specific files and folders
 # ----------------
 
+# Ignore local configuration files and docs, docker folders
 docs/
 docker/
