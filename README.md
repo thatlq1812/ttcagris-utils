@@ -1,19 +1,19 @@
 # TTC AgriS Utils
 
-Monorepo chứa các công cụ hỗ trợ phát triển và vận hành cho hệ sinh thái TTC AgriS.
+Monorepo containing development and operations tools supporting the TTC AgriS ecosystem.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Overview
 
-Repository này được tổ chức theo mô hình **Monorepo**, tập trung tất cả các công cụ, tiện ích và scripts hỗ trợ cho việc phát triển các dự án trong hệ sinh thái TTC AgriS.
+This repository follows a **Monorepo** model, consolidating all tools, utilities, and scripts that support development across the TTC AgriS ecosystem.
 
-### Lợi ích của Monorepo
+### Benefits of Monorepo
 
-- **Quản lý tập trung**: Clone một lần, có tất cả
-- **Chia sẻ code**: Các module dùng chung dễ dàng import
-- **CI/CD thống nhất**: Pipeline chung cho tất cả tools
-- **Version đồng bộ**: Đảm bảo tính tương thích giữa các tools
+- **Centralized management**: Clone once, get everything
+- **Code sharing**: Shared modules are easy to import
+- **Unified CI/CD**: Single pipeline for all tools
+- **Version synchronization**: Ensures compatibility between tools
 
 ## Repository Structure
 
@@ -108,25 +108,6 @@ pip install -e .
 | Commits | Conventional Commits format |
 | Branching | `feature/`, `fix/`, `docs/` prefixes |
 | Python | Use `pyproject.toml`, format with `black` |
-
-## Roadmap
-
-### Current Tools
-
-- [x] **docs-translator** - Markdown documentation translator
-
-### Planned Tools
-
-- [ ] **log-analyzer** - Log analysis and visualization
-- [ ] **api-tester** - API testing automation
-- [ ] **db-migrator** - Database migration helper
-- [ ] **env-manager** - Environment configuration manager
-
-### Planned Shared Libraries
-
-- [ ] **agris-logger** - Unified logging library
-- [ ] **agris-config** - Configuration management
-- [ ] **agris-cli** - CLI framework utilities
 
 ## Contributing
 
