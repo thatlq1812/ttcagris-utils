@@ -68,7 +68,7 @@ docs-translator translate --file doc.md --target en
 ### Clone Repository
 
 ```bash
-git clone https://github.com/ttcagris/ttcagris-utils.git
+git clone https://github.com/thatlq1812/ttcagris-utils.git
 cd ttcagris-utils
 ```
 
@@ -158,4 +158,4 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## Contact
 
 - **Organization**: TTC AgriS
-- **Repository**: [github.com/ttcagris/ttcagris-utils](https://github.com/ttcagris/ttcagris-utils)
+- **Repository**: [github.com/thatlq1812/ttcagris-utils](https://github.com/thatlq1812/ttcagris-utils)
