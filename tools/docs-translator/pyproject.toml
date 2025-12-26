@@ -50,6 +50,9 @@ dev = [
     "mypy>=1.7.0",
     "ruff>=0.1.0",
 ]
+build = [
+    "pyinstaller>=6.0.0",
+]
 
 [project.scripts]
 docs-translator = "docs_translator.cli.main:cli"
