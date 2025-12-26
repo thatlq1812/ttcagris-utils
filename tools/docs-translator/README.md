@@ -62,14 +62,48 @@ This will guide you through:
 ### 2. Translate a file
 
 ```bash
-# Translate Vietnamese to English
-docs-translator translate --file docs/README_vi.md --target en
+# Basic translation (auto-detect source language)
+docs-translator translate --file doc.md --target en
 
-# Translate English to Vietnamese
-docs-translator translate --file docs/README.md --target vi
+# Specify source and target languages
+docs-translator translate --file doc.md --source vi --target en
 
 # Specify output path
-docs-translator translate --file docs/README.md --target vi --output docs/README_vi.md
+docs-translator translate --file doc.md --target vi --output doc_vi.md
+```
+
+### Supported Languages
+
+The tool supports **any language pair** supported by the AI provider. Common language codes:
+
+| Code | Language | Code | Language |
+|------|----------|------|----------|
+| `en` | English | `zh` | Chinese (Simplified) |
+| `vi` | Vietnamese | `zh-TW` | Chinese (Traditional) |
+| `ja` | Japanese | `ko` | Korean |
+| `fr` | French | `de` | German |
+| `es` | Spanish | `pt` | Portuguese |
+| `ru` | Russian | `ar` | Arabic |
+| `th` | Thai | `id` | Indonesian |
+| `ms` | Malay | `hi` | Hindi |
+
+**Examples:**
+
+```bash
+# Vietnamese -> English
+docs-translator translate --file doc.md --source vi --target en
+
+# English -> Japanese
+docs-translator translate --file doc.md --source en --target ja
+
+# Chinese -> Vietnamese
+docs-translator translate --file doc.md --source zh --target vi
+
+# Auto-detect source, translate to Korean
+docs-translator translate --file doc.md --target ko
+
+# French -> German
+docs-translator translate --file doc.md --source fr --target de
 ```
 
 ### 3. Translate a directory
@@ -211,21 +245,6 @@ docs-translator config cache --clear
 # Or use --clear-cache flag
 docs-translator translate --file doc.md --target en --clear-cache
 ```
-
-## Supported Languages
-
-The tool supports any language pair supported by the underlying AI provider. Common codes:
-
-| Code | Language |
-|------|----------|
-| `en` | English |
-| `vi` | Vietnamese |
-| `zh` | Chinese |
-| `ja` | Japanese |
-| `ko` | Korean |
-| `fr` | French |
-| `de` | German |
-| `es` | Spanish |
 
 ## Project Structure
 
